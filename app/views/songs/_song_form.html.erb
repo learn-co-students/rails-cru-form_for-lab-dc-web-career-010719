@@ -1,0 +1,12 @@
+<%= form_for @song do |s| %>
+  <%= s.label :name %>
+  <%= s.text_field :name %><br><br>
+  <%= s.label :genre %>
+  <%= s.number_field :genre_id %><br><br>
+  <%= s.label :artist %>
+  <%= s.number_field :artist_id%><br><br>
+  <%= s.submit %>
+<% end %>
+
+<%# s.select :genre_id, @genres.all.collect {|g| [ g.name, g.id ] }, include_blank: true%>
+<%# s.select :artist_id, @artists.all.collect {|a| [ a.name, a.id ] }, include_blank: true%>
