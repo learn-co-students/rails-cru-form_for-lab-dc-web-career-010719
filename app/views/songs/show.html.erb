@@ -3,4 +3,3 @@
 Song Artist: <%=link_to "#{Artist.find(@song.artist_id).name}", artist_path(Artist.find(@song.artist_id))%><br>
 Song Genre: <%=link_to "#{Genre.find(@song.genre_id).name}", genre_path(Genre.find(@song.genre_id))%>
 <h1><%=link_to "Edit", edit_song_url%></h1>
-<h1><%=link_to "List of all songs", songs_path%></h1>

@@ -1,4 +1,13 @@
 <h1>Genre</h1>
 <h1>Genre Name: <%=@genre.name%></h1>
+<p>Songs:<br>
+  <%@genre.songs.each do |song|%>
+  <%=link_to "#{song.name}", song_path(song)%><br>
+  <%end%>
+</p>
+<p>Artists:<br>
+  <%@genre.artists.uniq.each do |artist|%>
+  <%=link_to "#{artist.name}", artist_path(artist)%><br>
+  <%end%>
+</p>
 <h1><%=link_to "Edit", edit_genre_url%></h1>
-<h1><%=link_to "List of all genres", genres_path%></h1>

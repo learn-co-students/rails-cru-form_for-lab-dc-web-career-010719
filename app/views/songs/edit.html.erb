@@ -3,8 +3,8 @@
 <%=f.label "Song Name:"%><br>
 <%=f.text_field :name%><br>
 <%=f.label "Artist ID:"%><br>
-<%=f.number_field :artist_id%><br>
+<%=f.select :artist_id, @artist_id_options%><br>
 <%=f.label 'Genre ID:'%><br>
-<%=f.number_field :genre_id%><br>
+<%=f.select :genre_id, @genre_id_options%><br>
 <%=f.submit "Update Song"%>
 <%end%>

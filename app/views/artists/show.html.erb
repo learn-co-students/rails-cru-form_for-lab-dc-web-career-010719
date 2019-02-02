@@ -1,5 +1,14 @@
 <h1>Artist</h1>
 <h1>Artist Name: <%=@artist.name%></h1>
 <p>Bio: <%=@artist.bio%></p>
+<p>Songs:<br>
+  <%@artist.songs.each do |song|%>
+  <%=link_to "#{song.name}", song_path(song)%><br>
+  <%end%>
+</p>
+<p>Genres:<br>
+  <%@artist.genres.uniq.each do |genre|%>
+  <%=link_to "#{genre.name}", genre_path(genre)%><br>
+  <%end%>
+</p>
 <h1><%=link_to "Edit", edit_artist_url%></h1>
-<h1><%=link_to "List of all artists", artists_path%></h1>
