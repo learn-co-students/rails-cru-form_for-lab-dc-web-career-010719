@@ -1,0 +1,5 @@
+<h1>Songs Database</h1>
+<%@songs.each_with_index do |song, index|%>
+<p><%=link_to "#{index+1}. Song Name: #{song.name}", song_path(song)%></p>
+<%end%>
+<h1><%=link_to "Create a new song", new_song_url%></h1>
