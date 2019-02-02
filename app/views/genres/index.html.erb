@@ -1,0 +1,5 @@
+<h1>Genres Database</h1>
+<%=@genres.each_with_index do |genre, index|%>
+<%=link_to "#{index+1}. Genre Name: #{genre.name}", genre_path(genre)%><br>
+<%end%>
+<h1><%=link_to "Create a new genre", new_genre_url%></h1>

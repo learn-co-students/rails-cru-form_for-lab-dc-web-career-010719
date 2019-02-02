@@ -1,0 +1,6 @@
+<h1>Artists Database</h1>
+<%=@artists.each_with_index do |artist, index|%>
+<%=link_to "#{index+1}. Artist Name: #{artist.name}", artist_path(artist)%><br>
+Bio: <%=artist.bio%><br><br>
+<%end%>
+<h1><%=link_to "Create a new artist", new_artist_url%></h1>
