@@ -6,7 +6,7 @@
 <h3>Discography</h3>
 <ul>
   <% @artist.songs.each do |s| %>
-    <li><%= link_to s.name %></li>
+    <li><%= link_to s.name, song_path(s) %></li>
     <% end %>
 </ul>
 
