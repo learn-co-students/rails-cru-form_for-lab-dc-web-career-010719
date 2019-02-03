@@ -1,0 +1,10 @@
+<h1>All Songs</h1>
+
+  <ul>
+    <% @songs.order(:name).each do |song| %>
+      <li><p><%= link_to song.name, song %></p></li>
+    <% end %>
+  </ul>
+
+  <p></p>
+  <%= link_to "Create New Song", new_song_path %>
