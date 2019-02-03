@@ -1,0 +1,10 @@
+Genre Form
+<%= form_for @genre do |genre| %>
+
+	<%= genre.label "My genre name"%>
+  <%= genre.text_field :name%>
+  <br>
+
+	<%= genre.submit "Create Genre"%>
+
+<%end%>
