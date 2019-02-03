@@ -1,0 +1,14 @@
+<h1><%= @artist.name %></h1>
+
+<p>My artist bio:</p>
+<%= @artist.bio %><p></p>
+
+<h3>Discography</h3>
+<ul>
+  <% @artist.songs.each do |s| %>
+    <li><%= link_to s.name %></li>
+    <% end %>
+</ul>
+
+<%= link_to "Edit This Artist", edit_artist_path(@artist) %><br>
+<%= link_to "Artist Index", artists_path %>
